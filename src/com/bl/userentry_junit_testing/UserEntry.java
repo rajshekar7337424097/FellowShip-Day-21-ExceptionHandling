@@ -85,4 +85,5 @@ public class UserEntry {
 		details.contactNumber(inputStr3);
 		details.emailID(inputStr4);
 	}
+
 }
