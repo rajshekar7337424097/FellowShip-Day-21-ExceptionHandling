@@ -1,10 +1,8 @@
-package com.bl.parameterised_testing;
+package com.bl.userentry_junit_testing;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-
 
 public class UserEntry {
 	
@@ -21,7 +19,6 @@ public class UserEntry {
 			System.out.println(inputStr1+ " is invalid Name");
 			return false;
 		}
-
 	}
 	
 	public boolean lastName(String inputStr2) {
@@ -40,7 +37,7 @@ public class UserEntry {
 	}
 	
 	public boolean contactNumber(String inputStr3) {
-		String contactNumberPattern = "^(\\+[0-9]{2}\\s{1})?[0-9]{10}$";
+		String contactNumberPattern = "[+]{0,1}[0-9]{0,2}[0-9]{10}$";
 		Pattern regex = Pattern.compile(contactNumberPattern);
 		Matcher contactNumberMatcher = regex.matcher(inputStr3);
 		
@@ -54,7 +51,7 @@ public class UserEntry {
 	}
 	
 	public boolean emailID(String inputStr4) {
-		String emailPattern = "^abc(.+)[A-Za-z0-9]{3}+(@+)bl+(.+)[co]*(.[A-Za-z]{2})$";
+		String emailPattern = "^[a-z.]{2,30}@{1}[a-z]{3,10}.[a-z]{3}$";
 		Pattern regex = Pattern.compile(emailPattern);
 		Matcher emailMatcher = regex.matcher(inputStr4);
 		
