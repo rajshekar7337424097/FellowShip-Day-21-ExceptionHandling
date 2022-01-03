@@ -8,7 +8,7 @@ public class ContactNumberException {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter Phone Number");
+		System.out.println("Enter Phone Number :");
 		
 		try {
 			String phoneNumberPattern = "^[+]{0,1}[0-9]{0,2}[0-9]{10}$";
@@ -31,5 +31,4 @@ public class ContactNumberException {
 			
 		}
 	}
-
 }
